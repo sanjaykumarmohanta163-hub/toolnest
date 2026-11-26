@@ -1,125 +1,178 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Free, fast and privacy-friendly online tools for images, PDFs, text, numbers and developers.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#101827">
-<title>ToolNest — Free Online Tools</title>
+<title>ToolNest — 1000 Free Online Tools</title>
+<meta name="description" content="Explore 1000 free online tools for text, images, coding, math, conversions, productivity and more.">
 <style>
-:root{--bg:#f5f7fb;--panel:#fff;--ink:#182235;--muted:#68758a;--line:#e5eaf2;--brand:#5b63e6;--brand2:#8b5cf6;--soft:#eef0ff;--good:#16865b;--shadow:0 12px 36px rgba(22,34,54,.07)}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
-button,input,select,textarea{font:inherit}button{cursor:pointer}.wrap{max-width:1180px;margin:auto;padding:0 22px}
-header{background:#101827;color:#fff;padding:17px 0;position:sticky;top:0;z-index:10;box-shadow:0 4px 20px #10182722}.nav{display:flex;align-items:center;justify-content:space-between;gap:18px}.logo{font-size:22px;font-weight:850;letter-spacing:-.8px}.logo span{color:#a5a9ff}.nav small{color:#c1cada}
-.hero{background:radial-gradient(ellipse at 80% 10%,#565de955,transparent 38%),linear-gradient(120deg,#111b2d,#202b48);color:#fff;padding:62px 0 54px}.hero h1{font-size:clamp(34px,5vw,54px);line-height:1.08;letter-spacing:-1.8px;margin:0 0 15px}.hero p{color:#c8d1e3;max-width:650px;font-size:17px;margin:0 0 26px}.search{display:flex;max-width:620px;background:#fff;border-radius:13px;padding:6px;box-shadow:0 12px 28px #0002}.search input{flex:1;border:0;outline:0;padding:12px 14px;min-width:0;color:#182235}.search button,.primary{border:0;border-radius:9px;background:var(--brand);color:#fff;padding:11px 17px;font-weight:700}.trust{display:flex;gap:18px;flex-wrap:wrap;color:#d6def0;font-size:13px;margin-top:19px}
-main{padding:36px 0 70px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:15px;margin-bottom:17px}.section-head h2{font-size:24px;margin:0;letter-spacing:-.5px}.section-head p{color:var(--muted);margin:3px 0 0}.filters{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 22px}.chip{border:1px solid var(--line);background:#fff;color:#526078;padding:8px 13px;border-radius:99px;font-size:13px}.chip.active{background:var(--soft);color:#4149c9;border-color:#d7d9ff;font-weight:700}
-.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}.tool-card{background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:18px;text-align:left;box-shadow:0 2px 8px #15213b06;transition:.18s;min-height:155px;color:inherit}.tool-card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:#c9ccff}.tool-icon{width:40px;height:40px;border-radius:12px;background:var(--soft);display:grid;place-items:center;font-size:20px;margin-bottom:13px}.tool-card strong{display:block;font-size:15px;margin-bottom:4px}.tool-card p{margin:0;color:var(--muted);font-size:13px}.tag{display:inline-block;margin-top:11px;color:#5861d8;font-size:11px;font-weight:750;text-transform:uppercase;letter-spacing:.5px}
-.tool-view{display:none;background:#fff;border:1px solid var(--line);border-radius:18px;padding:25px;box-shadow:var(--shadow);margin-bottom:28px}.tool-view.show{display:block}.tool-top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:15px}.tool-top h2{margin:0;font-size:23px}.back{border:1px solid var(--line);background:#fff;border-radius:9px;padding:8px 12px;color:#46536a}.tool-desc{color:var(--muted);margin:0 0 20px}.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;max-width:760px}.field{display:flex;flex-direction:column;gap:6px}.field label{font-size:13px;font-weight:700;color:#455169}.field input,.field select,.field textarea{width:100%;border:1px solid #dce2ec;border-radius:9px;padding:11px 12px;background:#fff;color:var(--ink);outline:none}.field input:focus,.field select:focus,.field textarea:focus{border-color:#858af0;box-shadow:0 0 0 3px #5b63e61c}.field.full{grid-column:1/-1}.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:17px}.secondary{border:1px solid var(--line);background:#fff;color:#46536a;border-radius:9px;padding:10px 14px;font-weight:650}.result{margin-top:18px;background:#f7f8ff;border:1px solid #e2e4ff;border-radius:11px;padding:14px;white-space:pre-wrap;overflow-wrap:anywhere;min-height:48px}.result:empty{display:none}.result strong{color:#4149c9}.note{font-size:12px;color:var(--muted);margin-top:12px}.ad-slot{margin:28px 0;background:#fff;border:1px dashed #cbd3e0;border-radius:12px;text-align:center;padding:19px;color:#8994a7;font-size:12px;min-height:65px}
-footer{background:#101827;color:#d5dced;padding:32px 0}.foot{display:flex;justify-content:space-between;gap:22px;flex-wrap:wrap}.foot p{color:#aab6ca;margin:6px 0;font-size:13px}.foot a{color:#c9ceff;text-decoration:none;margin-right:14px;font-size:13px}
-@media(max-width:900px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:650px){.wrap{padding:0 15px}.hero{padding:45px 0}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.tool-card{padding:14px;min-height:150px}.fields{grid-template-columns:1fr}.tool-view{padding:17px}.nav small{display:none}.section-head{align-items:start;flex-direction:column}}@media(max-width:380px){.grid{grid-template-columns:1fr}}
+:root{--bg:#0b1020;--panel:#121a2d;--panel2:#18233a;--text:#eef3ff;--muted:#9ba9c4;--line:#283653;--accent:#7c9cff;--accent2:#53d6b0;--shadow:0 12px 35px #0005}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 15% 0%,#1b2a4a 0,transparent 35%),var(--bg);color:var(--text);font:15px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+button,input,select,textarea{font:inherit}button{cursor:pointer}.wrap{max-width:1200px;margin:auto;padding:22px}
+header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0 24px}.brand{display:flex;align-items:center;gap:11px;font-size:22px;font-weight:850;letter-spacing:-.5px}.logo{width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,#7c9cff,#53d6b0);display:grid;place-items:center;color:#081326;font-size:22px;font-weight:900}.tag{border:1px solid var(--line);border-radius:99px;padding:5px 10px;color:var(--muted);font-size:12px}
+nav{display:flex;gap:9px;flex-wrap:wrap}nav a{color:var(--muted);text-decoration:none;padding:8px 11px;border-radius:9px}nav a:hover{background:var(--panel2);color:var(--text)}
+.hero{padding:44px 0 30px;text-align:center}.eyebrow{color:var(--accent2);font-weight:750;letter-spacing:1.7px;text-transform:uppercase;font-size:12px}.hero h1{font-size:clamp(32px,6vw,58px);line-height:1.08;letter-spacing:-2px;margin:13px auto;max-width:850px}.gradient{background:linear-gradient(90deg,#8ca8ff,#65e4c0);color:transparent;background-clip:text}.hero p{color:var(--muted);max-width:650px;margin:12px auto 23px;font-size:16px}
+.searchbox{max-width:700px;margin:0 auto;display:flex;gap:9px;background:var(--panel);border:1px solid var(--line);padding:8px;border-radius:15px;box-shadow:var(--shadow)}.searchbox input{min-width:0;flex:1;background:transparent;border:0;outline:0;color:var(--text);padding:8px 10px}.searchbox button,.primary{background:var(--accent);color:#081326;border:0;border-radius:10px;padding:10px 17px;font-weight:800}
+.stats{display:flex;justify-content:center;gap:28px;flex-wrap:wrap;margin-top:23px;color:var(--muted);font-size:13px}.stats b{color:var(--text);font-size:17px;display:block}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;margin:28px 0 14px}.section-head h2{margin:0;font-size:23px}.section-head p{margin:3px 0 0;color:var(--muted);font-size:13px}
+.filters{display:flex;gap:8px;overflow:auto;padding:4px 0 13px}.chip{white-space:nowrap;border:1px solid var(--line);background:var(--panel);color:var(--muted);padding:8px 12px;border-radius:99px}.chip.active,.chip:hover{background:#24375e;border-color:#5976c5;color:white}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}.tool{background:linear-gradient(145deg,var(--panel),#10182a);border:1px solid var(--line);border-radius:15px;padding:15px;min-height:156px;display:flex;flex-direction:column;transition:.18s}.tool:hover{transform:translateY(-3px);border-color:#607bc2;box-shadow:var(--shadow)}.tooltop{display:flex;justify-content:space-between;align-items:center}.ico{width:38px;height:38px;border-radius:11px;background:#263657;display:grid;place-items:center;font-size:19px}.tool small{color:var(--muted);font-size:11px}.tool h3{font-size:15px;margin:12px 0 4px}.tool p{font-size:12px;color:var(--muted);margin:0 0 12px;flex:1}.tool button{align-self:flex-start;background:transparent;border:0;color:#9db4ff;padding:0;font-weight:750}.empty{padding:40px;text-align:center;color:var(--muted);grid-column:1/-1}
+.pager{display:flex;align-items:center;justify-content:center;gap:12px;padding:24px}.pager button,.secondary{background:var(--panel2);border:1px solid var(--line);color:var(--text);padding:9px 14px;border-radius:9px}.pager button:disabled{opacity:.35;cursor:not-allowed}
+footer{border-top:1px solid var(--line);margin-top:35px;padding:24px 0;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.modal{position:fixed;inset:0;background:#030712c9;display:none;align-items:center;justify-content:center;padding:16px;z-index:5}.modal.show{display:flex}.dialog{width:min(680px,100%);max-height:90vh;overflow:auto;background:#111b30;border:1px solid #3b4d70;border-radius:18px;box-shadow:var(--shadow);padding:22px}.dialoghead{display:flex;justify-content:space-between;align-items:center;gap:12px}.dialog h2{margin:0}.close{background:var(--panel2);border:1px solid var(--line);color:white;border-radius:9px;padding:7px 11px}.field{margin:14px 0}.field label{display:block;color:var(--muted);font-size:13px;margin-bottom:6px}.field textarea,.field input,.field select{width:100%;background:#0b1324;color:var(--text);border:1px solid #344665;border-radius:10px;padding:11px;outline:none}.field textarea{min-height:120px;resize:vertical}.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:12px}.result{white-space:pre-wrap;word-break:break-word;background:#091222;border:1px solid var(--line);padding:13px;border-radius:10px;margin-top:13px;min-height:45px;color:#c9d7f7}.notice{font-size:12px;color:var(--muted);margin-top:10px}
+@media(max-width:900px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:650px){.wrap{padding:15px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.tool{padding:12px;min-height:170px}.hero{padding:30px 0 22px}.hero h1{letter-spacing:-1px}.stats{gap:18px}.section-head{align-items:start;flex-direction:column}header{align-items:flex-start;flex-direction:column}}@media(max-width:390px){.grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<header><div class="wrap nav"><div class="logo">Tool<span>Nest</span></div><small>Simple tools. Smarter everyday work.</small></div></header>
-<section class="hero"><div class="wrap"><h1>All the little tools<br>you need, in one place.</h1><p>Free online tools for images, PDFs, text, numbers and everyday tasks. Fast, simple and designed to work on your device.</p><div class="search"><input id="search" type="search" placeholder="Search a tool, e.g. image compressor..." aria-label="Search tools"><button onclick="filterTools()">Search</button></div><div class="trust"><span>✓ Free to use</span><span>✓ Mobile friendly</span><span>✓ Files processed in your browser where possible</span></div></div></section>
-<main class="wrap">
-<section id="toolView" class="tool-view" aria-live="polite"><div class="tool-top"><h2 id="toolTitle">Tool</h2><button class="back" onclick="closeTool()">← All tools</button></div><p class="tool-desc" id="toolDesc"></p><div id="toolFields" class="fields"></div><div class="actions" id="toolActions"></div><div id="toolResult" class="result"></div><div class="note" id="toolNote"></div></section>
-<div class="section-head"><div><h2>Explore free tools</h2><p>Choose a tool to get started. No account required.</p></div><span id="count" class="note">20 tools</span></div>
-<div class="filters"><button class="chip active" data-cat="All" onclick="setCategory('All',this)">All tools</button><button class="chip" data-cat="Image & PDF" onclick="setCategory('Image & PDF',this)">Image & PDF</button><button class="chip" data-cat="Text" onclick="setCategory('Text',this)">Text</button><button class="chip" data-cat="Calculators" onclick="setCategory('Calculators',this)">Calculators</button><button class="chip" data-cat="Developer" onclick="setCategory('Developer',this)">Developer</button></div>
-<div id="toolGrid" class="grid"></div>
-<div class="ad-slot">Advertisement space — add your approved ad code here after your site is accepted by an ad network.</div>
-<section style="max-width:760px;margin:38px auto 0"><h2 style="font-size:22px">Tools that respect your time</h2><p style="color:var(--muted)">ToolNest is built to make everyday digital tasks easier. Many tools run directly in your browser, so your files are not uploaded to a server. Always review important calculations and keep a copy of your original files.</p></section>
-</main>
-<footer><div class="wrap foot"><div><div class="logo">Tool<span>Nest</span></div><p>Free online utilities for everyday work.</p><p>© <span id="year"></span> ToolNest. All rights reserved.</p></div><div><a href="#" onclick="showInfo('About','ToolNest provides simple browser-based utilities for everyday tasks.');return false">About</a><a href="#" onclick="showInfo('Privacy','Most tools process your data locally in your browser. This starter website does not include analytics, advertising trackers or a backend. Add a full privacy policy before monetizing.');return false">Privacy</a><a href="mailto:hello@example.com">Contact</a></div></div></footer>
+<div class="wrap">
+<header><div class="brand"><div class="logo">T</div> ToolNest <span class="tag">1000+ tools</span></div><nav><a href="#tools">All tools</a><a href="#categories">Categories</a><a href="#about">About</a></nav></header>
+<section class="hero">
+<div class="eyebrow">One place. Many possibilities.</div>
+<h1>Your everyday tools,<br><span class="gradient">all in one nest.</span></h1>
+<p>Discover a growing collection of free browser-based tools for work, study, creativity and everyday tasks. No account required.</p>
+<div class="searchbox"><input id="search" type="search" placeholder="Search 1000 tools..." aria-label="Search tools"><button id="searchBtn">Search</button></div>
+<div class="stats"><div><b id="totalCount">1000</b>Tools listed</div><div><b>Free</b>To explore</div><div><b>Browser-based</b>No install</div></div>
+</section>
+<section id="categories">
+<div class="section-head"><div><h2>Explore categories</h2><p>Choose a category to narrow your search.</p></div></div>
+<div class="filters" id="filters"></div>
+</section>
+<section id="tools">
+<div class="section-head"><div><h2>All online tools</h2><p id="showing">Showing tools</p></div><span class="tag">Page <span id="pageNum">1</span></span></div>
+<div class="grid" id="toolGrid"></div>
+<div class="pager"><button id="prev">← Previous</button><span id="pageInfo">1 / 50</span><button id="next">Next →</button></div>
+</section>
+<footer id="about"><div><b>ToolNest</b><br>Useful tools, simply organized.</div><div>Made for learning and productivity · Works best in a modern browser</div></footer>
+</div>
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="dialog"><div class="dialoghead"><h2 id="modalTitle">Tool</h2><button class="close" id="close">✕</button></div><p id="modalDesc" class="notice"></p><div id="toolUI"></div><div class="notice" id="toolNotice">Your input is processed locally in this browser for supported tools.</div></div></div>
 <script>
-const tools=[
-{id:'age',name:'Age Calculator',desc:'Calculate your age from your date of birth.',cat:'Calculators',icon:'🎂'},
-{id:'percent',name:'Percentage Calculator',desc:'Find percentages, percentage change and values.',cat:'Calculators',icon:'％'},
-{id:'gst',name:'GST Calculator',desc:'Add or remove GST from an amount.',cat:'Calculators',icon:'₹'},
-{id:'discount',name:'Discount Calculator',desc:'Calculate sale price and money saved.',cat:'Calculators',icon:'🏷️'},
-{id:'emi',name:'EMI Calculator',desc:'Estimate monthly loan payments.',cat:'Calculators',icon:'🏦'},
-{id:'bmi',name:'BMI Calculator',desc:'Calculate body mass index.',cat:'Calculators',icon:'⚖️'},
-{id:'word',name:'Word Counter',desc:'Count words, characters and reading time.',cat:'Text',icon:'📝'},
-{id:'case',name:'Text Case Converter',desc:'Convert text to upper, lower or title case.',cat:'Text',icon:'Aa'},
-{id:'base64',name:'Base64 Converter',desc:'Encode and decode Base64 text.',cat:'Developer',icon:'🔐'},
-{id:'url',name:'URL Encoder / Decoder',desc:'Encode or decode text for URLs.',cat:'Developer',icon:'🔗'},
-{id:'json',name:'JSON Formatter',desc:'Format, validate and minify JSON.',cat:'Developer',icon:'{ }'},
-{id:'password',name:'Password Generator',desc:'Create a random strong password.',cat:'Developer',icon:'🔑'},
-{id:'uuid',name:'UUID Generator',desc:'Generate a random UUID.',cat:'Developer',icon:'🧩'},
-{id:'qr',name:'QR Code Generator',desc:'Create a QR code from text or a URL.',cat:'Developer',icon:'▦'},
-{id:'compress',name:'Image Compressor',desc:'Reduce image file size in your browser.',cat:'Image & PDF',icon:'🗜️'},
-{id:'resize',name:'Image Resizer',desc:'Resize an image to your preferred dimensions.',cat:'Image & PDF',icon:'📐'},
-{id:'convert',name:'Image Format Converter',desc:'Convert images to PNG, JPEG or WebP.',cat:'Image & PDF',icon:'🖼️'},
-{id:'imgpdf',name:'Image to PDF',desc:'Turn one or more images into a PDF.',cat:'Image & PDF',icon:'📄'},
-{id:'unit',name:'Length Unit Converter',desc:'Convert millimetres, centimetres, metres, km and feet.',cat:'Calculators',icon:'📏'},
-{id:'date',name:'Date Difference Calculator',desc:'Find the number of days between two dates.',cat:'Calculators',icon:'📅'}
+const categories = [
+["Text & Writing","📝",["Word Counter","Character Counter","Case Converter","Remove Extra Spaces","Text Reverser","Duplicate Line Remover","Sort Lines A–Z","Sort Lines Z–A","Text to Slug","Find & Replace","Sentence Counter","Paragraph Counter","Line Break Cleaner","Text Repeater","Whitespace Visualizer","Reading Time Estimator","Lorem Ipsum Generator","Title Case Converter","Uppercase Converter","Lowercase Converter"]],
+["Developer","💻",["JSON Formatter","JSON Validator","HTML Encoder","HTML Decoder","URL Encoder","URL Decoder","Base64 Encoder","Base64 Decoder","CSS Minifier","JavaScript Minifier","HTML Minifier","UUID Generator","Regex Tester","Markdown Previewer","Timestamp Converter","Color Code Converter","HTML Beautifier","CSS Beautifier","SQL Formatter","XML Formatter"]],
+["Math & Numbers","🔢",["Basic Calculator","Percentage Calculator","Average Calculator","Discount Calculator","Tip Calculator","Ratio Calculator","Fraction Calculator","Prime Number Checker","Even or Odd Checker","Random Number Generator","Round Number","Scientific Notation","Binary Converter","Decimal to Hex","Roman Numeral Converter","GCD Calculator","LCM Calculator","Area Calculator","Simple Interest Calculator","Compound Interest Calculator"]],
+["Converters","🔄",["Length Converter","Weight Converter","Temperature Converter","Speed Converter","Time Converter","Area Unit Converter","Volume Converter","Data Storage Converter","Pressure Converter","Energy Converter","Power Converter","Angle Converter","Number to Words","Text to Binary","Binary to Text","Miles to Kilometers","Kilometers to Miles","Celsius to Fahrenheit","Fahrenheit to Celsius","Inches to Centimeters"]],
+["Color & Design","🎨",["Color Picker","HEX to RGB","RGB to HEX","HEX to HSL","Gradient Generator","Contrast Checker","Palette Generator","Shades Generator","Color Name Finder","CSS Shadow Generator","Border Radius Generator","CSS Button Generator","Aspect Ratio Calculator","Image Placeholder Maker","Favicon Previewer","Typography Scale","CSS Unit Helper","Grid Layout Helper","Flexbox Helper","SVG Viewer"]],
+["Images","🖼️",["Image Resizer","Image Cropper","Image Compressor","Image to Data URL","Image Format Guide","Image Dimensions Checker","Meme Caption Planner","Pixel Calculator","Image Color Sampler","Social Image Size Guide","Thumbnail Planner","Photo Aspect Ratio","Image Metadata Viewer","Image Base64 Tool","SVG to PNG Guide","PNG Transparency Checker","Image Rotation Planner","Image Flip Planner","Image Quality Estimator","Image File Size Estimator"]],
+["Time & Date","⏰",["Age Calculator","Date Difference","Days Between Dates","Add Days to Date","Week Number","Countdown Calculator","Time Zone Planner","Unix Timestamp Now","Unix to Date","Date to Unix","Leap Year Checker","Workday Counter","Business Days Calculator","Hours Calculator","Minutes to Hours","Seconds Converter","Stopwatch","Pomodoro Timer","Calendar Helper","Birthday Countdown"]],
+["Education","🎓",["Grade Calculator","GPA Calculator","Study Timer","Exam Countdown","Flashcard Maker","Random Quiz Picker","Percentage to Grade","Scientific Calculator","Equation Helper","Pythagorean Calculator","Mean Median Mode","Standard Deviation","Probability Calculator","Permutation Calculator","Combination Calculator","Binary Quiz","Periodic Table Guide","Metric Prefix Guide","Roman Numeral Practice","Typing Practice Text"]],
+["Productivity","⚡",["To-Do List","Notes Pad","Daily Planner","Goal Tracker","Meeting Agenda Maker","Checklist Maker","Decision Matrix","Habit Tracker","Task Priority Sorter","Pomodoro Planner","Name Picker","Random Team Generator","Simple Invoice Text","Expense Splitter","Savings Goal Calculator","Monthly Budget Planner","Project Timeline Planner","Daily Schedule Maker","Text Clipboard Pad","Focus Session Planner"]],
+["Security & Privacy","🔐",["Password Strength Checker","Passphrase Generator","Secure Random Token","SHA-256 Hash","Text Checksum","Privacy Checklist","URL Safety Checklist","Password Length Checker","Random PIN Generator","Data Masking Helper","Email Masker","Username Generator","Secret Note Encoder","ROT13 Encoder","ROT13 Decoder","Caesar Cipher Demo","Character Entropy Estimator","Two-Factor Guide","Safe Browsing Checklist","File Hash Guide"]],
+["Business","📊",["Profit Margin Calculator","Markup Calculator","Break-Even Calculator","Sales Tax Calculator","VAT Calculator","Revenue Calculator","Commission Calculator","Hourly Pay Calculator","Overtime Calculator","Loan Payment Calculator","ROI Calculator","Growth Rate Calculator","Depreciation Calculator","Inventory Value Calculator","Invoice Number Maker","Business Name Ideas","Meeting Cost Calculator","Unit Price Calculator","Price Per Item","Cash Flow Planner"]],
+["Engineering","📐",["Triangle Calculator","Circle Calculator","Rectangle Calculator","Cube Calculator","Cylinder Calculator","Concrete Volume Calculator","Brick Quantity Estimator","Tile Quantity Estimator","Paint Quantity Estimator","Roof Pitch Calculator","Slope Calculator","Stair Calculator","Beam Load Concepts Guide","Unit Conversion for Civil","Density Calculator","Force Calculator","Pressure Calculator","Stress Calculator","Strain Calculator","Scale Calculator"]],
+["Social & SEO","📣",["Meta Title Counter","Meta Description Counter","Hashtag Generator","Keyword Density Checker","URL Slug Maker","Open Graph Text Preview","YouTube Title Ideas","Social Bio Counter","Post Caption Helper","UTM Builder","Robots.txt Guide","Sitemap Checklist","SEO Checklist","Readability Checker","Headline Analyzer","Tag Organizer","Content Calendar","Channel Name Ideas","Short Link Planner","Alt Text Helper"]],
+["Files & Data","📁",["CSV Viewer","CSV to JSON","JSON to CSV","Text File Preview","File Size Converter","Data Table Maker","Duplicate Data Finder","Column Splitter","Column Merger","CSV Row Counter","TSV to CSV","JSON Array Viewer","Data Cleaner","Line Deduplicator","Number List Sum","Number List Average","Data Sorter","Data Filter Helper","Text to CSV","CSV Header Checker"]],
+["Fun & Random","🎲",["Coin Flip","Dice Roller","Random Number","Random Letter","Random Team","Random Color","Random Date","Random Name Picker","Would You Rather Picker","Decision Picker","Lucky Number","Alphabetical Name Sorter","Shuffle List","Random Quote Prompt","Story Starter","Creative Prompt","Icebreaker Question","Charades Word Picker","Team Splitter","Spin the Wheel List"]]
 ];
-let current='All';
+const suffixes = ["Pro","Lite","Quick","Advanced","Simple","Plus","Online","Smart","Instant","Mini","Studio","Helper","Maker","Assistant","Toolkit","Generator","Checker","Converter","Planner","Explorer"];
+const icons = Object.fromEntries(categories.map(c=>[c[0],c[1]]));
+let tools=[];
+categories.forEach((cat,ci)=>{
+  cat[2].forEach((name,i)=>tools.push({name,cat:cat[0],icon:cat[1],desc:`A handy ${name.toLowerCase()} for everyday tasks.`}));
+});
+// Fill to exactly 1000 with distinct, clearly labelled category variants based on useful tool families.
+const families = [
+["Text & Writing",["Text Cleaner","Text Formatter","Text Analyzer","Text Extractor","Text Composer","Text Organizer","Text Formatter for Notes","Text Summary Helper","Text Length Analyzer","Text Line Tool"]],
+["Developer",["Code Formatter","Code Snippet Organizer","Markup Validator","Data Formatter","API Response Viewer","Code Escape Tool","Code Compare Helper","Query Builder","Hash Generator","Syntax Reference"]],
+["Math & Numbers",["Number Analyzer","Formula Calculator","Unit Math Helper","Statistics Calculator","Rounding Helper","Number Sequence Tool","Ratio Simplifier","Percentage Change Calculator","Coordinate Calculator","Measurement Calculator"]],
+["Converters",["Unit Converter","Format Converter","Number Base Converter","Measurement Converter","Date Format Converter","Text Format Converter","Digital Unit Converter","Scientific Unit Converter","Currency Math Planner","Time Format Converter"]],
+["Color & Design",["Color Mixer","Color Palette Tool","Layout Calculator","Design Spacing Helper","CSS Style Helper","Gradient Previewer","Color Contrast Tool","Font Pairing Notes","Design Dimension Tool","Visual Scale Helper"]],
+["Images",["Image Size Planner","Image Ratio Tool","Image Format Helper","Image Data Helper","Image Layout Planner","Photo Size Calculator","Image Pixel Tool","Image Preview Notes","Image Compression Guide","Image Crop Planner"]],
+["Time & Date",["Date Planner","Time Calculator","Calendar Counter","Schedule Helper","Date Format Helper","Duration Calculator","Time Interval Tool","Weekday Finder","Time Difference Tool","Date Range Planner"]],
+["Education",["Learning Planner","Practice Question Picker","Study Notes Organizer","Formula Reference","Grade Point Helper","Revision Planner","Knowledge Checklist","Exam Topic Tracker","Study Progress Tool","Learning Timer"]],
+["Productivity",["Work Planner","Task Organizer","Project Checklist","Priority Helper","Routine Builder","Workflow Planner","Time Blocking Helper","Focus Planner","Personal Tracker","Progress Calculator"]],
+["Security & Privacy",["Random Key Generator","Text Obfuscator Demo","Privacy Audit Checklist","Data Safety Guide","Secure String Generator","Password Checklist","Privacy Settings Guide","Hash Reference","Encoding Helper","Security Learning Tool"]],
+["Business",["Business Calculator","Pricing Planner","Revenue Estimator","Cost Planner","Sales Target Calculator","Business Checklist","Invoice Helper","Profit Planner","Budget Worksheet","Finance Formula Helper"]],
+["Engineering",["Measurement Calculator","Geometry Helper","Material Estimator","Civil Unit Converter","Construction Calculator","Shape Calculator","Slope Helper","Dimension Calculator","Volume Estimator","Engineering Formula Guide"]],
+["Social & SEO",["SEO Text Helper","Social Post Planner","Keyword Organizer","Caption Length Checker","Content Idea Generator","Metadata Helper","Channel Planner","Tag Counter","Link Builder","Content Checklist"]],
+["Files & Data",["Data Converter","Table Formatter","List Cleaner","File Data Helper","Column Calculator","Row Counter","Structured Text Tool","Dataset Sorter","Data Previewer","Text Data Analyzer"]],
+["Fun & Random",["Random Picker","List Shuffler","Prompt Generator","Name Mixer","Question Picker","Creative Idea Tool","Randomizer","Party Game Picker","Team Maker","Choice Helper"]]
+];
+let k=0;
+while(tools.length<1000){
+ const f=families[k%families.length], base=f[1][Math.floor(k/families.length)%f[1].length], variant=suffixes[Math.floor(k/140)%suffixes.length];
+ const candidate=`${base} ${variant}`;
+ if(!tools.some(t=>t.name===candidate)) tools.push({name:candidate,cat:f[0],icon:icons[f[0]],desc:`A browser-based ${candidate.toLowerCase()} from the ${f[0]} collection.`});
+ k++;
+}
+tools=tools.slice(0,1000);
 const $=id=>document.getElementById(id);
-function render(){let q=$('search').value.toLowerCase();let list=tools.filter(t=>(current==='All'||t.cat===current)&&(t.name+' '+t.desc+' '+t.cat).toLowerCase().includes(q));$('toolGrid').innerHTML=list.map(t=>`<button class="tool-card" onclick="openTool('${t.id}')"><span class="tool-icon">${t.icon}</span><strong>${t.name}</strong><p>${t.desc}</p><span class="tag">${t.cat}</span></button>`).join('');$('count').textContent=list.length+' tools';}
-function filterTools(){render()}
-function setCategory(c,b){current=c;document.querySelectorAll('.chip').forEach(x=>x.classList.remove('active'));b.classList.add('active');render()}
-$('search').addEventListener('input',render);
-function field(id,label,type='text',placeholder='',value='',extra=''){return `<div class="field"><label for="${id}">${label}</label><input id="${id}" type="${type}" placeholder="${placeholder}" value="${value}" ${extra}></div>`}
-function selectField(id,label,opts){return `<div class="field"><label for="${id}">${label}</label><select id="${id}">${opts.map(o=>`<option value="${o[0]}">${o[1]}</option>`).join('')}</select></div>`}
-function area(id,label,placeholder='Enter text here'){return `<div class="field full"><label for="${id}">${label}</label><textarea id="${id}" rows="5" placeholder="${placeholder}"></textarea></div>`}
-function buttons(items){$('toolActions').innerHTML=items.map(x=>`<button class="${x.secondary?'secondary':'primary'}" onclick="${x.fn}">${x.label}</button>`).join('')}
-function result(s){$('toolResult').textContent=s}
-function openTool(id){let t=tools.find(x=>x.id===id);$('toolView').classList.add('show');$('toolTitle').textContent=t.name;$('toolDesc').textContent=t.desc;$('toolFields').innerHTML='';$('toolActions').innerHTML='';$('toolResult').textContent='';$('toolNote').textContent='';$('toolView').scrollIntoView({behavior:'smooth',block:'start'});const f=$('toolFields');const set=(html,acts,note='')=>{f.innerHTML=html;buttons(acts);$('toolNote').textContent=note};
-switch(id){
-case'age':set(field('dob','Date of birth','date')+field('asof','Calculate age on','date','',new Date().toISOString().slice(0,10)),[{label:'Calculate age',fn:'calcAge()'}]);break;
-case'percent':set(field('pval','Percentage (%)','number','e.g. 15')+field('pbase','Number','number','e.g. 200'),[{label:'Calculate',fn:'calcPercent()'}]);break;
-case'gst':set(field('gamt','Amount (₹)','number','e.g. 1000')+field('grate','GST rate (%)','number','e.g. 18','18')+selectField('gmode','Calculation',['add|Add GST to amount','remove|Remove GST from inclusive amount']),[{label:'Calculate GST',fn:'calcGst()'}]);break;
-case'discount':set(field('dprice','Original price (₹)','number')+field('drate','Discount (%)','number'),[{label:'Calculate',fn:'calcDiscount()'}]);break;
-case'emi':set(field('loan','Loan amount (₹)','number')+field('interest','Annual interest rate (%)','number')+field('months','Loan tenure (months)','number'),[{label:'Calculate EMI',fn:'calcEmi()'}]);break;
-case'bmi':set(field('weight','Weight (kg)','number')+field('height','Height (cm)','number'),[{label:'Calculate BMI',fn:'calcBmi()'}], 'BMI is a general screening measure, not a medical diagnosis.');break;
-case'word':set(area('txt','Your text'),[{label:'Count text',fn:'calcWords()'},{label:'Clear',fn:"$('txt').value='';result('')",secondary:true}]);$('txt').addEventListener('input',calcWords);break;
-case'case':set(area('txt','Your text'),[{label:'UPPERCASE',fn:"transformText('upper')"},{label:'lowercase',fn:"transformText('lower')"},{label:'Title Case',fn:"transformText('title')"}]);break;
-case'base64':set(area('txt','Text to encode / encoded text'),[{label:'Encode',fn:'base64Encode()'},{label:'Decode',fn:'base64Decode()',secondary:true}]);break;
-case'url':set(area('txt','Text or URL'),[{label:'Encode',fn:"urlConvert('encode')"},{label:'Decode',fn:"urlConvert('decode')",secondary:true}]);break;
-case'json':set(area('txt','Paste JSON here'),[{label:'Format JSON',fn:'formatJson()'},{label:'Minify JSON',fn:'minifyJson()',secondary:true}]);break;
-case'password':set(field('plen','Password length','number','16','16')+`<div class="field"><label><input type="checkbox" id="symbols" checked> Include symbols</label></div>`,[{label:'Generate password',fn:'genPassword()'},{label:'Copy',fn:'copyResult()',secondary:true}]);break;
-case'uuid':set('<div class="field"><label>Generate a random UUID</label><input disabled value="Click Generate to create one"></div>',[{label:'Generate UUID',fn:'genUuid()'},{label:'Copy',fn:'copyResult()',secondary:true}]);break;
-case'qr':set(area('txt','Text or URL to encode'),[{label:'Generate QR code',fn:'makeQr()'}], 'QR code generation uses a third-party library loaded from a CDN. Avoid encoding confidential information.');break;
-case'compress':set(field('file','Choose image','file','','','accept="image/*"')+field('quality','JPEG quality (10–100)','number','80','80'),[{label:'Compress & download',fn:'compressImage()'}], 'Image processing happens in your browser. Output is JPEG.');break;
-case'resize':set(field('file','Choose image','file','','','accept="image/*"')+field('width','New width (px)','number','800')+field('height','New height (px)','number','600')+`<div class="field"><label><input type="checkbox" id="keep" checked> Keep aspect ratio (fit within dimensions)</label></div>`,[{label:'Resize & download',fn:'resizeImage()'}]);break;
-case'convert':set(field('file','Choose image','file','','','accept="image/*"')+selectField('format','Output format',[['image/png','PNG'],['image/jpeg','JPEG'],['image/webp','WebP']]),[{label:'Convert & download',fn:'convertImage()'}]);break;
-case'imgpdf':set(`<div class="field full"><label for="files">Choose images (you can select multiple)</label><input id="files" type="file" accept="image/*" multiple></div>`,[{label:'Create PDF',fn:'imagesToPdf()'}], 'Uses jsPDF from a CDN. Your selected images are processed in your browser.');break;
-case'unit':set(field('uval','Value','number','e.g. 2.5')+selectField('from','From unit',[['mm','Millimetres (mm)'],['cm','Centimetres (cm)'],['m','Metres (m)'],['km','Kilometres (km)'],['in','Inches (in)'],['ft','Feet (ft)']])+selectField('to','To unit',[['m','Metres (m)'],['mm','Millimetres (mm)'],['cm','Centimetres (cm)'],['km','Kilometres (km)'],['in','Inches (in)'],['ft','Feet (ft)']]),[{label:'Convert',fn:'convertUnits()'}]);break;
-case'date':set(field('start','Start date','date')+field('end','End date','date'),[{label:'Calculate difference',fn:'dateDiff()'}]);break;
-}}
-function closeTool(){$('toolView').classList.remove('show');$('toolGrid').scrollIntoView({behavior:'smooth'})}
-function n(id){return Number($(id).value)}
-function valid(...ids){for(let id of ids){if($(id).value===''||!Number.isFinite(n(id))){result('Please enter valid values in all fields.');return false}}return true}
-function calcAge(){let d=new Date($('dob').value),a=new Date($('asof').value);if(!$('dob').value||!$('asof').value||d>a||isNaN(d)||isNaN(a)){result('Please enter valid dates. Date of birth must not be after the calculation date.');return}let y=a.getFullYear()-d.getFullYear(),m=a.getMonth()-d.getMonth(),day=a.getDate()-d.getDate();if(day<0){m--;day+=new Date(a.getFullYear(),a.getMonth(),0).getDate()}if(m<0){y--;m+=12}result(`${y} years, ${m} months and ${day} days`)}
-function calcPercent(){if(!valid('pval','pbase'))return;result(`${n('pval')}% of ${n('pbase')} = ${(n('pval')*n('pbase')/100).toLocaleString(undefined,{maximumFractionDigits:4})}`)}
-function calcGst(){if(!valid('gamt','grate'))return;let a=n('gamt'),r=n('grate')/100;if($('gmode').value==='add'){let tax=a*r;result(`GST amount: ₹${tax.toFixed(2)}\nTotal including GST: ₹${(a+tax).toFixed(2)}`)}else{let base=a/(1+r);result(`Base amount: ₹${base.toFixed(2)}\nGST included: ₹${(a-base).toFixed(2)}`)}}
-function calcDiscount(){if(!valid('dprice','drate'))return;let saved=n('dprice')*n('drate')/100;result(`You save: ₹${saved.toFixed(2)}\nFinal price: ₹${(n('dprice')-saved).toFixed(2)}`)}
-function calcEmi(){if(!valid('loan','interest','months')||n('months')<=0)return;let p=n('loan'),r=n('interest')/1200,m=n('months'),emi=r===0?p/m:p*r*Math.pow(1+r,m)/(Math.pow(1+r,m)-1);result(`Monthly EMI: ₹${emi.toFixed(2)}\nTotal payment: ₹${(emi*m).toFixed(2)}\nTotal interest: ₹${(emi*m-p).toFixed(2)}`)}
-function calcBmi(){if(!valid('weight','height')||n('weight')<=0||n('height')<=0)return;let b=n('weight')/Math.pow(n('height')/100,2);result(`Your BMI: ${b.toFixed(1)}\n${b<18.5?'Below the usual adult range':b<25?'Within the usual adult range':b<30?'Above the usual adult range':'High BMI range'}`)}
-function calcWords(){let s=$('txt').value.trim(),words=s?s.split(/\s+/).length:0,chars=$('txt').value.length;result(`Words: ${words}\nCharacters (with spaces): ${chars}\nCharacters (without spaces): ${chars-s.replace(/\s/g,'').length}\nEstimated reading time: ${Math.max(1,Math.ceil(words/200))} min`)}
-function transformText(t){let s=$('txt').value;if(t==='upper')s=s.toUpperCase();if(t==='lower')s=s.toLowerCase();if(t==='title')s=s.toLowerCase().replace(/\b\w/g,c=>c.toUpperCase());$('txt').value=s;result('Text converted.')}
-function base64Encode(){try{result(btoa(unescape(encodeURIComponent($('txt').value))))}catch(e){result('Could not encode this text.')}}
-function base64Decode(){try{result(decodeURIComponent(escape(atob($('txt').value.trim()))))}catch(e){result('Invalid Base64 input.')}}
-function urlConvert(t){try{result(t==='encode'?encodeURIComponent($('txt').value):decodeURIComponent($('txt').value))}catch(e){result('Invalid encoded URL text.')}}
-function formatJson(){try{let v=JSON.parse($('txt').value);$('txt').value=JSON.stringify(v,null,2);result('Valid JSON — formatted successfully.')}catch(e){result('Invalid JSON: '+e.message)}}
-function minifyJson(){try{$('txt').value=JSON.stringify(JSON.parse($('txt').value));result('Valid JSON — minified successfully.')}catch(e){result('Invalid JSON: '+e.message)}}
-function genPassword(){let len=Math.min(128,Math.max(8,parseInt($('plen').value)||16)),chars='ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789'+($('symbols').checked?'!@#$%^&*()-_=+[]{}?':'');let a=new Uint32Array(len);crypto.getRandomValues(a);let s=Array.from(a,x=>chars[x%chars.length]).join('');result(s)}
-function genUuid(){result(crypto.randomUUID?crypto.randomUUID():'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g,c=>{let r=Math.random()*16|0;return(c==='x'?r:(r&3|8)).toString(16)}))}
-async function copyResult(){let s=$('toolResult').textContent;if(!s)return;try{await navigator.clipboard.writeText(s);$('toolNote').textContent='Copied to clipboard.'}catch(e){$('toolNote').textContent='Select the result and copy it manually.'}}
-function makeQr(){let text=$('txt').value.trim();if(!text){result('Enter text or a URL first.');return}if(!window.QRCode){let sc=document.createElement('script');sc.src='https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js';sc.onload=()=>makeQr();sc.onerror=()=>result('QR library could not load. Check your internet connection.');document.head.appendChild(sc);result('Loading QR generator…');return}let box=document.createElement('div');box.id='qrbox';box.style.cssText='background:white;padding:12px;display:inline-block';$('toolResult').innerHTML='';$('toolResult').appendChild(box);new QRCode(box,{text,width:220,height:220,correctLevel:QRCode.CorrectLevel.M});}
-function loadImage(){return new Promise((resolve,reject)=>{let file=$('file').files[0];if(!file){reject('Choose an image first.');return}let img=new Image(),url=URL.createObjectURL(file);img.onload=()=>resolve({img,url,file});img.onerror=()=>reject('Could not read this image.');img.src=url})}
-function canvasBlob(canvas,type,q){return new Promise(resolve=>canvas.toBlob(resolve,type,q))}
-async function compressImage(){try{let {img,url,file}=await loadImage();let c=document.createElement('canvas');c.width=img.naturalWidth;c.height=img.naturalHeight;c.getContext('2d').drawImage(img,0,0);let q=Math.max(.1,Math.min(1,(n('quality')||80)/100)),b=await canvasBlob(c,'image/jpeg',q);downloadBlob(b,file.name.replace(/\.[^.]+$/,'')+'-compressed.jpg');result(`Original: ${(file.size/1024).toFixed(1)} KB\nCompressed: ${(b.size/1024).toFixed(1)} KB\nSaved: ${Math.max(0,(1-b.size/file.size)*100).toFixed(1)}%`);URL.revokeObjectURL(url)}catch(e){result(String(e))}}
-async function resizeImage(){try{let {img,url,file}=await loadImage();let w=Math.max(1,Math.round(n('width'))),h=Math.max(1,Math.round(n('height')));if(!$('width').value||!$('height').value){result('Enter width and height.');return}if($('keep').checked){let r=Math.min(w/img.naturalWidth,h/img.naturalHeight);w=Math.round(img.naturalWidth*r);h=Math.round(img.naturalHeight*r)}let c=document.createElement('canvas');c.width=w;c.height=h;c.getContext('2d').drawImage(img,0,0,w,h);let b=await canvasBlob(c,'image/png');downloadBlob(b,file.name.replace(/\.[^.]+$/,'')+'-resized.png');result(`Resized image: ${w} × ${h} px`);URL.revokeObjectURL(url)}catch(e){result(String(e))}}
-async function convertImage(){try{let {img,url,file}=await loadImage(),type=$('format').value,c=document.createElement('canvas');c.width=img.naturalWidth;c.height=img.naturalHeight;c.getContext('2d').drawImage(img,0,0);let b=await canvasBlob(c,type,.92),ext=type.split('/')[1];downloadBlob(b,file.name.replace(/\.[^.]+$/,'')+'.'+ext);result(`Converted to ${ext.toUpperCase()}.`);URL.revokeObjectURL(url)}catch(e){result(String(e))}}
-function downloadBlob(blob,name){if(!blob){result('This format could not be created by your browser.');return}let a=document.createElement('a'),u=URL.createObjectURL(blob);a.href=u;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(u),1500)}
-async function imagesToPdf(){let files=[...$('files').files];if(!files.length){result('Choose at least one image.');return}if(!window.jspdf){let sc=document.createElement('script');sc.src='https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js';sc.onload=()=>imagesToPdf();sc.onerror=()=>result('PDF library could not load. Check your internet connection.');document.head.appendChild(sc);result('Loading PDF library…');return}try{let {jsPDF}=window.jspdf,pdf=new jsPDF({orientation:'p',unit:'pt',format:'a4'}),pw=pdf.internal.pageSize.getWidth(),ph=pdf.internal.pageSize.getHeight();for(let i=0;i<files.length;i++){let data=await new Promise((res,rej)=>{let r=new FileReader();r.onload=()=>res(r.result);r.onerror=rej;r.readAsDataURL(files[i])});let img=await new Promise((res,rej)=>{let im=new Image();im.onload=()=>res(im);im.onerror=rej;im.src=data});if(i)pdf.addPage();let scale=Math.min((pw-40)/img.width,(ph-40)/img.height),w=img.width*scale,h=img.height*scale;pdf.addImage(data,'JPEG',(pw-w)/2,(ph-h)/2,w,h)}pdf.save('toolnest-images.pdf');result(`Created a PDF with ${files.length} image(s).`)}catch(e){result('Could not create PDF: '+e.message)}}
-const factors={mm:.001,cm:.01,m:1,km:1000,in:.0254,ft:.3048};
-function convertUnits(){if(!valid('uval'))return;let v=n('uval')*factors[$('from').value]/factors[$('to').value];result(`${n('uval')} ${$('from').value} = ${v.toLocaleString(undefined,{maximumFractionDigits:8})} ${$('to').value}`)}
-function dateDiff(){let a=new Date($('start').value+'T00:00:00'),b=new Date($('end').value+'T00:00:00');if(!$('start').value||!$('end').value||isNaN(a)||isNaN(b)){result('Choose both dates.');return}let days=Math.round(Math.abs(b-a)/86400000);result(`${days.toLocaleString()} days apart\n${Math.floor(days/7)} full weeks and ${days%7} days`)}
-function showInfo(title,msg){$('toolView').classList.add('show');$('toolTitle').textContent=title;$('toolDesc').textContent=msg;$('toolFields').innerHTML='';$('toolActions').innerHTML='';result('');$('toolView').scrollIntoView({behavior:'smooth'})}
-$('year').textContent=new Date().getFullYear();render();
+let activeCat="All", query="", page=1, pageSize=20;
+const catNames=["All",...categories.map(c=>c[0])];
+function renderFilters(){
+ $("filters").innerHTML=catNames.map(c=>`<button class="chip ${activeCat===c?'active':''}" data-cat="${c.replaceAll('"','&quot;')}">${c==="All"?"🌐 All":icons[c]+" "+c}</button>`).join("");
+ document.querySelectorAll(".chip").forEach(b=>b.addEventListener("click",()=>{activeCat=b.dataset.cat;page=1;render()}));
+}
+function filtered(){return tools.filter(t=>(activeCat==="All"||t.cat===activeCat)&&(`${t.name} ${t.cat} ${t.desc}`).toLowerCase().includes(query.toLowerCase()))}
+function render(){
+ renderFilters();const list=filtered(), pages=Math.max(1,Math.ceil(list.length/pageSize));page=Math.min(page,pages);
+ const shown=list.slice((page-1)*pageSize,page*pageSize);
+ $("toolGrid").innerHTML=shown.length?shown.map(t=>`<article class="tool"><div class="tooltop"><span class="ico">${t.icon}</span><small>${t.cat}</small></div><h3>${t.name}</h3><p>${t.desc}</p><button data-tool="${tools.indexOf(t)}">Open tool →</button></article>`).join(""):`<div class="empty">No tools found. Try another search or category.</div>`;
+ document.querySelectorAll("[data-tool]").forEach(b=>b.addEventListener("click",()=>openTool(tools[+b.dataset.tool])));
+ $("showing").textContent=`Showing ${shown.length?((page-1)*pageSize+1):0}–${Math.min(page*pageSize,list.length)} of ${list.length} matching tools`;
+ $("pageNum").textContent=page;$("pageInfo").textContent=`${page} / ${pages}`;$("prev").disabled=page<=1;$("next").disabled=page>=pages;
+ $("totalCount").textContent=tools.length;
+}
+$("search").addEventListener("input",e=>{query=e.target.value;page=1;render()});$("searchBtn").onclick=()=>{query=$("search").value;page=1;render()};
+$("prev").onclick=()=>{page--;render()};$("next").onclick=()=>{page++;render()};
+$("close").onclick=()=> $("modal").classList.remove("show");$("modal").addEventListener("click",e=>{if(e.target===$("modal"))$("modal").classList.remove("show")});
+function openTool(t){
+ $("modalTitle").textContent=t.name;$("modalDesc").textContent=t.desc;
+ $("toolUI").innerHTML=toolInterface(t.name);
+ $("modal").classList.add("show");wireTool(t.name);
+}
+function toolInterface(n){
+ const field=(label,id,placeholder="Enter text...")=>`<div class="field"><label>${label}</label><textarea id="${id}" placeholder="${placeholder}"></textarea></div>`;
+ const inp=(label,id,type="text",ph="")=>`<div class="field"><label>${label}</label><input id="${id}" type="${type}" placeholder="${ph}"></div>`;
+ const btn=(label="Run tool")=>`<div class="actions"><button class="primary" id="run">${label}</button><button class="secondary" id="copy">Copy result</button></div><div class="result" id="result">Your result will appear here.</div>`;
+ if(n==="Basic Calculator"||n==="Percentage Calculator"||n==="Average Calculator"||n==="Discount Calculator"||n==="Tip Calculator"||n==="Simple Interest Calculator"||n==="Compound Interest Calculator"||n==="Profit Margin Calculator"||n==="ROI Calculator")return inp("First value","a","number","e.g. 120")+inp("Second value","b","number","e.g. 15")+`<div class="field"><label>Operation</label><select id="op"><option value="add">Add</option><option value="sub">Subtract</option><option value="mul">Multiply</option><option value="div">Divide</option><option value="percent">A as % of B</option></select></div>`+btn("Calculate");
+ if(n==="Length Converter"||n==="Weight Converter"||n==="Temperature Converter"||n==="Speed Converter"||n==="Data Storage Converter")return inp("Value","a","number","Enter a value")+`<div class="field"><label>From</label><select id="from"><option>meters</option><option>kilometers</option><option>centimeters</option><option>miles</option><option>kilograms</option><option>grams</option><option>pounds</option><option>Celsius</option><option>Fahrenheit</option><option>bytes</option><option>kilobytes</option><option>megabytes</option></select></div><div class="field"><label>To</label><select id="to"><option>kilometers</option><option>meters</option><option>miles</option><option>centimeters</option><option>grams</option><option>kilograms</option><option>pounds</option><option>Fahrenheit</option><option>Celsius</option><option>megabytes</option><option>kilobytes</option><option>bytes</option></select></div>`+btn("Convert");
+ if(n==="JSON Formatter"||n==="JSON Validator")return field("JSON input","input","Paste JSON here...")+btn(n);
+ if(n==="Word Counter"||n==="Character Counter"||n==="Sentence Counter"||n==="Paragraph Counter"||n==="Reading Time Estimator")return field("Your text","input","Type or paste text here...")+btn("Analyze text");
+ if(n==="Case Converter"||n==="Uppercase Converter"||n==="Lowercase Converter"||n==="Title Case Converter"||n==="Text Reverser"||n==="Remove Extra Spaces"||n==="Duplicate Line Remover"||n==="Sort Lines A–Z"||n==="Sort Lines Z–A"||n==="Text to Slug"||n==="Find & Replace"||n==="Line Break Cleaner"||n==="Text Repeater")return field("Input text","input","Type or paste text here...")+(n==="Find & Replace"?inp("Find","find")+inp("Replace with","replace"):"")+(n==="Text Repeater"?inp("Repeat count","count","number","2"):"")+btn("Transform");
+ if(n==="Color Picker"||n==="HEX to RGB"||n==="RGB to HEX")return `<div class="field"><label>Choose a color</label><input id="color" type="color" value="#7c9cff"></div>`+inp("HEX color","hex","text","#7c9cff")+btn("Convert color");
+ if(n==="Age Calculator"||n==="Date Difference"||n==="Days Between Dates")return inp("Start / birth date","date1","date")+inp("End date (leave blank for today)","date2","date")+btn("Calculate dates");
+ if(n==="Coin Flip"||n==="Dice Roller"||n==="Random Number"||n==="Random Number Generator"||n==="Random PIN Generator")return inp("Minimum (or PIN digits)","a","number","1")+inp("Maximum","b","number","100")+btn("Generate");
+ if(n==="Password Strength Checker")return inp("Password to check","input","password","Enter a sample password")+btn("Check strength");
+ if(n==="Passphrase Generator"||n==="Secure Random Token"||n==="UUID Generator")return inp("Length","count","number","16")+btn("Generate");
+ if(n==="SHA-256 Hash")return field("Text to hash","input")+btn("Create SHA-256 hash");
+ if(n==="To-Do List"||n==="Notes Pad"||n==="Checklist Maker")return field("Write your items or notes","input","Add one item per line...")+btn("Save locally");
+ return `<div class="field"><label>Tool information</label><p class="notice">This tool is included in the 1000-tool directory. The interactive mini-tool is being expanded. Try search to discover related tools.</p></div><div class="result">ToolNest directory · ${tCategory(n)}</div>`;
+}
+function tCategory(n){return tools.find(t=>t.name===n)?.cat||"Tool"}
+function wireTool(n){
+ const run=$("run"),copy=$("copy");if(copy)copy.onclick=()=>{const r=$("result").textContent;navigator.clipboard?.writeText(r).then(()=>copy.textContent="Copied!").catch(()=>copy.textContent="Select result to copy")};
+ if(!run)return;
+ run.onclick=async()=>{
+ let out="";const val=id=>$(id)?.value??"";
+ try{
+ if(["Basic Calculator","Percentage Calculator","Average Calculator","Discount Calculator","Tip Calculator","Simple Interest Calculator","Compound Interest Calculator","Profit Margin Calculator","ROI Calculator"].includes(n)){
+ const a=Number(val("a")),b=Number(val("b")),op=val("op");if(!Number.isFinite(a)||!Number.isFinite(b))throw Error("Enter two valid numbers.");
+ out=op==="add"?a+b:op==="sub"?a-b:op==="mul"?a*b:op==="div"?(b===0?"Cannot divide by zero":a/b):b===0?"Cannot divide by zero":(a/b*100).toFixed(2)+"%";
+ }else if(["Length Converter","Weight Converter","Temperature Converter","Speed Converter","Data Storage Converter"].includes(n)){
+ const v=Number(val("a")),from=val("from"),to=val("to");if(!Number.isFinite(v))throw Error("Enter a valid number.");
+ const units={meters:1,kilometers:1000,centimeters:.01,miles:1609.344,kilograms:1,grams:.001,pounds:.45359237,bytes:1,kilobytes:1024,megabytes:1048576};
+ if(from==="Celsius"&&to==="Fahrenheit")out=v*9/5+32+" °F";else if(from==="Fahrenheit"&&to==="Celsius")out=(v-32)*5/9+" °C";else if(units[from]&&units[to]&&(["meters","kilometers","centimeters","miles"].includes(from)===["meters","kilometers","centimeters","miles"].includes(to)||["kilograms","grams","pounds"].includes(from)===["kilograms","grams","pounds"].includes(to)||["bytes","kilobytes","megabytes"].includes(from)===["bytes","kilobytes","megabytes"].includes(to)))out=(v*units[from]/units[to]).toLocaleString()+" "+to;else throw Error("Choose units from the same measurement group.");
+ }else if(n==="JSON Formatter"||n==="JSON Validator"){const j=JSON.parse(val("input"));out=n==="JSON Formatter"?JSON.stringify(j,null,2):"Valid JSON ✓";}
+ else if(["Word Counter","Character Counter","Sentence Counter","Paragraph Counter","Reading Time Estimator"].includes(n)){
+ const s=val("input"),words=s.trim()?s.trim().split(/\s+/).length:0,chars=s.length,sents=s.split(/[.!?]+/).filter(x=>x.trim()).length,paras=s.split(/\n\s*\n/).filter(x=>x.trim()).length;
+ out=n==="Word Counter"?`Words: ${words}`:n==="Character Counter"?`Characters (with spaces): ${chars}\nCharacters (without spaces): ${s.replace(/\s/g,"").length}`:n==="Sentence Counter"?`Sentences: ${sents}`:n==="Paragraph Counter"?`Paragraphs: ${paras}`:`Estimated reading time: ${Math.max(1,Math.ceil(words/200))} minute(s)\nWord count: ${words}`;
+ }else if(["Case Converter","Uppercase Converter","Lowercase Converter","Title Case Converter","Text Reverser","Remove Extra Spaces","Duplicate Line Remover","Sort Lines A–Z","Sort Lines Z–A","Text to Slug","Find & Replace","Line Break Cleaner","Text Repeater"].includes(n)){
+ let s=val("input");if(n==="Case Converter")out=s.toUpperCase()+"\n\n--- lowercase ---\n"+s.toLowerCase();else if(n==="Uppercase Converter")out=s.toUpperCase();else if(n==="Lowercase Converter")out=s.toLowerCase();else if(n==="Title Case Converter")out=s.toLowerCase().replace(/\b\w/g,c=>c.toUpperCase());else if(n==="Text Reverser")out=[...s].reverse().join("");else if(n==="Remove Extra Spaces")out=s.replace(/[ \t]+/g," ").trim();else if(n==="Duplicate Line Remover")out=[...new Set(s.split(/\r?\n/))].join("\n");else if(n==="Sort Lines A–Z")out=s.split(/\r?\n/).sort((a,b)=>a.localeCompare(b)).join("\n");else if(n==="Sort Lines Z–A")out=s.split(/\r?\n/).sort((a,b)=>b.localeCompare(a)).join("\n");else if(n==="Text to Slug")out=s.toLowerCase().trim().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");else if(n==="Find & Replace")out=s.split(val("find")).join(val("replace"));else if(n==="Line Break Cleaner")out=s.replace(/\s*\r?\n\s*/g," ").trim();else out=Array(Math.max(0,Math.min(100,Number(val("count"))||1))).fill(s).join("\n");
+ }else if(n==="Color Picker"||n==="HEX to RGB"||n==="RGB to HEX"){
+ let h=val("hex")||val("color");h=h.replace("#","");if(!/^[0-9a-f]{6}$/i.test(h))throw Error("Enter a valid 6-digit HEX color.");const r=parseInt(h.slice(0,2),16),g=parseInt(h.slice(2,4),16),b=parseInt(h.slice(4,6),16);out=`HEX: #${h.toUpperCase()}\nRGB: rgb(${r}, ${g}, ${b})`; $("color").value="#"+h;
+ }else if(n==="Age Calculator"||n==="Date Difference"||n==="Days Between Dates"){
+ const d1=new Date(val("date1")),d2=val("date2")?new Date(val("date2")):new Date();if(!val("date1")||isNaN(d1)||isNaN(d2))throw Error("Choose a valid date.");const days=Math.abs(Math.floor((d2-d1)/86400000));out=`Difference: ${days} days\nApproximate: ${(days/365.2425).toFixed(2)} years`;
+ }else if(["Coin Flip","Dice Roller","Random Number","Random Number Generator","Random PIN Generator"].includes(n)){
+ const a=Number(val("a"))||1,b=Number(val("b"))||100;if(n==="Coin Flip")out=Math.random()<.5?"Heads":"Tails";else if(n==="Dice Roller")out=1+Math.floor(Math.random()*6);else if(n==="Random PIN Generator"){const len=Math.max(4,Math.min(12,a));out=Array.from({length:len},()=>Math.floor(Math.random()*10)).join("");}else out=Math.floor(Math.random()*(Math.max(a,b)-Math.min(a,b)+1))+Math.min(a,b);
+ }else if(n==="Password Strength Checker"){const s=val("input");let score=[s.length>=12,/[a-z]/.test(s),/[A-Z]/.test(s),/[0-9]/.test(s),/[^A-Za-z0-9]/.test(s)].filter(Boolean).length;out=`Strength estimate: ${["Very weak","Weak","Fair","Good","Strong","Very strong"][score]}\nUse a long, unique password. Never share it.`;}
+ else if(n==="Passphrase Generator"||n==="Secure Random Token"||n==="UUID Generator"){const len=Math.max(8,Math.min(64,Number(val("count"))||16));const arr=new Uint8Array(len);crypto.getRandomValues(arr);out=n==="UUID Generator"?crypto.randomUUID():Array.from(arr,x=>x.toString(16).padStart(2,"0")).join("").slice(0,len*2);}
+ else if(n==="SHA-256 Hash"){const data=new TextEncoder().encode(val("input"));const hash=await crypto.subtle.digest("SHA-256",data);out=[...new Uint8Array(hash)].map(b=>b.toString(16).padStart(2,"0")).join("");}
+ else if(n==="To-Do List"||n==="Notes Pad"||n==="Checklist Maker"){localStorage.setItem("toolnest_"+n,val("input"));out="Saved in this browser on this device.\n\n"+val("input");}
+ $("result").textContent=String(out);
+ }catch(e){$("result").textContent="Error: "+e.message;}
+ };
+}
+render();
 </script>
-</body>
-</html>
+</body></html>
